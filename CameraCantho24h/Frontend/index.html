@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!--link lib font some awve của cdnj-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+     <!-- Link Swiper's CSS -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+     
+    <!--link css-->
+     <link rel="stylesheet" href="./assets/css/main.css">
+     <link rel="stylesheet" href="./assets/css/base.css">
+     <link rel="stylesheet" href="./assets/css/product_productdetail.css">
+
+        
+
+    
+
+     <!--chèn logo wweb-->
+    <link rel="shortcut icon" href="./assets/image/Logoweb/logo1.png" type="image/x-icon">
+    <title>CameraCantho24h</title>
+</head>
+
+<body>
+    <!--mục header cùng với thẻ navbar-->
+    <header class="header">
+        <div class="header__container">
+            <div class="header__container__logo">
+                <img src="./assets/image/Logoweb/logo1.png" alt="logo">
+            </div>
+            <nav class="header__container__navbar">
+                <div class="header__container_navbar__head">
+                    <div class="header__container__logo"><img src="./assets/image/Logoweb/logo1.png" alt="logo"></div>
+                    <button class="close-menu-btn" type="button"></button>
+                </div>
+                <ul>
+                    <!--phần dropdown menu con trỏ xuống khi hover truột vào-->
+                    <li class="dropdown">
+                        <a href="#">Products</a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href=""><span>Camera Security</span></a>
+                            </li>
+                            <li>
+                                <a href=""><span>Camera Links</span></a>
+                            </li>
+                            <li>
+                                <a href=""><span>Lights</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">About Us</a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href=""><span>About</span></a>
+                            </li>
+                            <li>
+                                <a href=""><span>Contact</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Protect</a></li>
+                    <li class="dropdown">
+                        <a href="#">Support</a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href=""><span>FAQ</span></a>
+                            </li>
+                            <li>
+                                <a href=""><span>Hướng dẫn sủ dụng</span></a>
+                            </li>
+                            <li>
+                                <a href=""><span>Chính sách bảo hành</span></a>
+                            </li>
+                            <li>
+                                <a href=""><span>Trạm bảo hành</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </nav>
+            <div class="header__container__right">
+                <div class="search-container">
+                    <button class="search-btn icon-btn" type="button">
+                        <i class="fa-solid fa-search"></i>
+                    </button>   
+                    <!--mục form chứa thanh search-->
+                    <div class="search-container__form">
+                        <!--nội dung search btn khi hoover vào-->  
+                        <div class="search-container__form--all">
+                            <form action="">
+                                <div class="search-container__formt--logo">
+                                    <img src="./assets/image/Logoweb/logo1.png" alt="logo">
+                                </div>
+                                <div class="search-container__formt--input">
+                                    <input type="text" placeholder="Please enter you want to find!">
+                                    <i class="fa-solid fa-microphone " style="color: #74C0FC;padding-left: 20px;"></i>
+                                </div>
+                                <div class="search-container__formt--button">
+                                    <button>Search</button>
+                                </div>
+                          </form>    
+                        </div>         
+                    </div>
+                   
+                </div>
+
+                <button class="notice-btn icon-btn"><i class="fa-regular fa-bell"></i></button>
+                <button class="cart-btn icon-btn"><i class="fa-solid fa-cart-arrow-down"></i></button>
+                <button class="icon-btn button-signup" type="button"><span class="signup-in">sign up</span> &ensp; |</button>
+                <button class="icon-btn button-signin" type="button"><span class="signup-in">sign in</span></button>
+                <button class="open-menu-btn">
+                    <span class="line line-1"></span>
+                    <span class="line line-2"></span>
+                    <span class="line line-3"></span>
+                </button>
+            </div>
+    </header>
+
+
+
+    <!--tạo form mẫu login / sign up | sử dụng kiến thức hiển thị kiểu base model-->
+    <div class="modal">
+        <!--tạo lớp phủ khi mà base model đc mở trang homepage sẽ bị mờ đi-->
+        <div class="modal__overlay"></div>
+        <div class="modal__body modal__body-sub">
+            <!--chỗ này sẽ dựng forrm đăn ký đăng ký đăng nhập.-->
+            <!--register form-->
+            <div class="auth-form  auth-form__register auth-form--display">
+                <div class="auth-form__container">
+                    <div class="auth-form__header">
+                        <h3 class="auth-form__heading">Đăng ký</h3>
+                        <span class="auth-form__swtich-btn">Đăng nhập</span>
+                    </div>
+
+                    <div class="auth-form__form">
+                        <div class="auth-form__group">
+                            <input type="text" class="auth-form__input" placeholder="Email của bạn">
+                        </div>
+                        <div class="auth-form__group">
+                            <input type="password" class="auth-form__input" placeholder="Passowrd của bạn">
+                        </div>
+                        <div class="auth-form__group">
+                            <input type="password" class="auth-form__input" placeholder="Nhập lại mật khẩu">
+                        </div>
+                    </div>
+
+                    <div class="auth-form__controls">
+                        <button class="btn btn--back">Trở lại</button>
+                        <button class="btn btn--primary">Đăng ký</button>
+                    </div>
+                </div>
+                
+                <div class="auth-form__socials">
+                    <a href="" class=" auth-form__socials-facebook btn btn--size-s btn--with-icon">
+                        <i class=" auth-form__socials-icon fa-brands fa-square-facebook"></i>
+                       <span class="auth-form__socials-label"> Kết nối với Facebook</span>
+                    </a>
+                    <a href="" class="auth-form__socials-google btn btn--size-s btn--with-icon">
+                        <i class="auth-form__socials-icon fa-brands fa-google"></i>
+                        <span class="auth-form__socials-label">Kết nối với Google mail</span>
+                    </a>
+                </div>
+
+            </div> 
+
+            <!--login form-->
+            <div class="auth-form auth-form__login">
+                <div class="auth-form__container">
+                    <div class="auth-form__header">
+                        <h3 class="auth-form__heading">Đăng nhập</h3>
+                        <span class="auth-form__swtich-btn">Đăng ký</span>
+                    </div>
+
+                    <div class="auth-form__form">
+                        <div class="auth-form__group">
+                            <input type="text" class="auth-form__input" placeholder="Email của bạn">
+                        </div>
+                        <div class="auth-form__group">
+                            <input type="password" class="auth-form__input" placeholder="Passowrd của bạn">
+                        </div>
+                    </div>
+
+                    <div class="auth-form__aside">
+                        <div class="auth-form__help">
+                            <a href="" class="auth-form__link  auth-form__link-forgot ">Quên mật khẩu</a>
+                            <span class="auth-form__help-separate"></span>
+                            <a href="" class="auth-form__link">Cần trợ giúp?</a>
+                        </div>
+                    </div>
+
+                    <div class="auth-form__controls">
+                        <button class="btn btn--back">Trở lại</button>
+                        <button class="btn btn--primary">Đăng nhập</button>
+                    </div>
+                </div>
+                
+                <div class="auth-form__socials">
+                    <a href="" class=" auth-form__socials-facebook btn btn--size-s btn--with-icon">
+                        <i class=" auth-form__socials-icon fa-brands fa-square-facebook"></i>
+                       <span class="auth-form__socials-label"> kết nối với Facebook</span>
+                    </a>
+                    <a href="" class="auth-form__socials-google btn btn--size-s btn--with-icon">
+                        <i class="auth-form__socials-icon fa-brands fa-google"></i>
+                        <span class="auth-form__socials-label"> kết nối với Google mail</span>
+                    </a>
+                </div>
+
+            </div> 
+        </div>
+    </div>
+
+
+    <!--phần container body chính thân của web-->
+    <div class="container">
+        <!--Thiết kế banner-->
+        <div class="banner">
+            <!--bnnner container-->
+            <div class="banner__container">
+                <div id="slide">
+                    <div class="item" style="background-image: url(./assets/image/Banner/banner1.webp);">
+                        <div class="content">
+                            <div class="name">Name</div>
+                            <div class="des">thông tin đang bổ sung</div>
+                            <button>See more</button>
+                        </div>
+                    </div>
+                    <div class="item" style="background-image: url(./assets/image/Banner/banner2.png);">
+                        <div class="content">
+                            <div class="name">NAME</div>
+                            <div class="des">thông tin đang bổ sung</div>
+                            <button>See more</button>
+                        </div>
+                    </div>
+                    <div class="item" style="background-image: url(./assets/image/Banner/banner1.png);">
+                        <div class="content">
+                            <div class="name">NAME</div>
+                            <div class="des">thông tin đang bổ sung</div>
+                            <button>See more</button>
+                        </div>
+                    </div>
+                    <div class="item" style="background-image: url(./assets/image/Banner/banner2.png);">
+                        <div class="content">
+                            <div class="name">NAME</div>
+                            <div class="des">thông tin đang bổ sung</div>
+                            <button>See more</button>
+                        </div>
+                    </div>
+                    <div class="item" style="background-image: url(./assets/image/Banner/banner1.png);">
+                        <div class="content">
+                            <div class="name">NAME</div>
+                            <div class="des">thông tin đang bổ sung</div>
+                            <button>See more</button>
+                        </div>
+                    </div>
+                    <div class="item" style="background-image: url(./assets/image/Banner/banner2.png);">
+                        <div class="content">
+                            <div class="name">LUNDEV</div>
+                            <div class="des">Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu</div>
+                            <button>See more</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button id="prev"><i class="fa-solid fa-angle-left"></i></button>
+                    <button id="next"><i class="fa-solid fa-angle-right"></i></button>
+                </div>
+            </div>
+        </div>
+        
+        
+        <!--danh mục sản phẩm (sử dụng thư viện swipper js )-->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <!-- <img src="./assets/image/Categories/camerahome.png" /> -->
+                    <!--***-->
+                    <div class="cardcate-all">
+                        <div class="cardcate">
+                            <div class="cardcate__main" style="--clr:#009688;">
+                                <div class="img-box">
+                                    <!-- Hình ảnh hoặc nội dung khác trong form box -->
+                                    <img src="./assets/image/Categories/cameratrongnha.png" alt="">
+                                </div>
+                                <div class="content">
+                                    <h2>Categories</h2>
+                                    <p> thông tin cần thiết cho loại sản phẩm</p>
+                                    <a href="">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--***-->
+                <div class="swiper-slide">
+                    <!-- <img src="./assets/image/Categories/camerahome.png" /> -->
+                    <!-- Thẻ form box thay thế cho thẻ img -->
+                    <div class="cardcate-all">
+                        <div class="cardcate">
+                            <div class="cardcate__main" style="--clr:#009688;">
+                                <div class="img-box">
+                                    <!-- Hình ảnh hoặc nội dung khác trong form box -->
+                                    <img src="./assets/image/Categories/camera_outhome.png" alt="">
+                                </div>
+                                <div class="content">
+                                    <h2>Categories</h2>
+                                    <p>thông tin cần thiết cho loại sản phẩm</p>
+                                    <a href="">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--***-->
+                <div class="swiper-slide">
+                    <!-- <img src="./assets/image/Categories/camerahome.png" /> -->
+                    <!-- Thẻ form box thay thế cho thẻ img -->
+                    <div class="cardcate-all">
+                        <div class="cardcate">
+                            <div class="cardcate__main" style="--clr:#009688;">
+                                <div class="img-box">
+                                    <!-- Hình ảnh hoặc nội dung khác trong form box -->
+                                    <img src="./assets/image/Categories/camerakhongday.png" alt="">
+                                </div>
+                                <div class="content">
+                                    <h2>Categories</h2>
+                                    <p> thông tin cần thiết cho loại sản phẩm</p>
+                                    <a href="">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--***-->
+                <div class="swiper-slide">
+                    <!-- <img src="./assets/image/Categories/camerahome.png" /> -->
+                    <!-- Thẻ form box thay thế cho thẻ img -->
+                    <div class="cardcate-all">
+                        <div class="cardcate">
+                            <div class="cardcate__main" style="--clr:#009688;">
+                                <div class="img-box">
+                                    <!-- Hình ảnh hoặc nội dung khác trong form box -->
+                                    <img src="./assets/image/Categories/bulks.png" alt="">
+                                </div>
+                                <div class="content">
+                                    <h2>Categories</h2>
+                                    <p>thông tin cần thiết cho loại sản phẩm</p>
+                                    <a href="">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--***-->
+
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+            <!--css trực tiếp cho swipper-->
+            <style>
+                .swiper {
+                width: 100%;
+                padding-top: 50px;
+                padding-bottom: 50px;
+                background-color: #fff;
+                }
+            
+                .swiper-slide {
+                background-position: center;
+                background-size: cover;
+                width: 150px;
+                height: 170px;
+                }
+            
+                .swiper-slide img {
+                display: block;
+                width: 100%;
+                }
+            </style>
+
+        <!--Mục products cho trong trang homepage-->
+        <div class="cardproduct-all">
+            <div class="cardproduct-title">
+               <p>PRODUCT NEWS</p>
+            </div>   
+            <div class="cardproduct-group">
+              <div class="cardproduct">
+                <img src="./assets/image/products/pd1.png" alt="">
+                <div class="layer"></div>
+                <div class="info">
+                  <h1>product Name</h1>
+                  <p>đây là đoạn thông tin mô tả sản phẩm đang trong quá trình hoàn thiện</p>
+                  <button>Explore</button>
+                  </div>
+              </div>
+        
+              <div class="cardproduct">
+                <img src="./assets/image/products/pd2.png" alt="">
+                <div class="layer"></div>
+                <div class="info">
+                  <h1>product Name</h1>
+                  <p>đây là đoạn thông tin mô tả sản phẩm đang trong quá trình hoàn thiện</p>
+                  <button>Explore</button>
+                  </div>
+              </div>
+        
+              <div class="cardproduct">
+                <img src="./assets/image/products/pd3.png" alt="">
+                <div class="layer"></div>
+                <div class="info">
+                  <h1>product Name</h1>
+                  <p>đây là đoạn thông tin mô tả sản phẩm đang trong quá trình hoàn thiện</p>
+                  <button>Explore</button>
+                  </div>
+              </div>
+        
+              
+            </div>
+        </div>
+
+    
+    </div><!--end container của body main-->    `
+
+ 
+
+
+    <!--foooter-->
+    <footer class="footer">
+        <div class="footer-all">
+          <div class="row">
+            <div class="footer-col">
+              <h4>company</h4>
+              <ul>
+                <li><a href="#">about us</a></li>
+                <li><a href="#">Contact with me</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>get help</h4>
+              <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">shipping</a></li>
+                <li><a href="#">returns</a></li>
+                <li><a href="#">order status</a></li>
+                <li><a href="#">payment options</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Catergories products</h4>
+              <ul>
+                <li><a href="#">Security</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Lights</a></li>
+                <li><a href="#">Camera</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>follow us</h4>
+              <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+          <hr>
+        </div>
+    </footer>
+
+
+    <!--link js cho web homepage--->
+    <script src="./assets/js/navbar.js"></script>
+    <script src="./assets/js/banner.js"></script>
+    <script src="./assets/js/handle_signup_in.js"></script>
+    <!-- <script src="./assets/js/TabsUI.js"></script> -->
+    <!--scrip của swipper js-->
+    <script src="./assets/js/swipper_catogories.js"></script>
+    <!--lib thu vien online-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+
+</html>

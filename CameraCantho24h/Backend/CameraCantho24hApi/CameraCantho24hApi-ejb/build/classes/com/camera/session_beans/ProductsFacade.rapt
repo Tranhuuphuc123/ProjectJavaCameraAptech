@@ -1,0 +1,10 @@
+com/camera/entities/ImportDetails_.java
+com/camera/entities/OrderDetails_.java
+com/camera/entities/Categories_.java
+com/camera/entities/ImportDetailsPK_.java
+com/camera/entities/Products_.java
+com/camera/entities/Orders_.java
+com/camera/entities/Users_.java
+com/camera/entities/Import_.java
+com/camera/entities/Suppliers_.java
+com/camera/entities/OrderDetailsPK_.java

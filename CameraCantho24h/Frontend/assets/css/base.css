@@ -1,0 +1,83 @@
+/******file base css dùng để cấu hình các css  chung cho cả website******/
+
+
+/*khai báo biến cho css để tái sử dụng tránh cùng một tên thuộc tính 
+mà viết đi viết lại rất nhiều lần (kỹ thuật dùng biển giả)
+=> lưu ý ưu điểm là tăng tính tái sử dụng
+=> nhược điểm là bị phụ thuộc vào viến giả này nếu nó thay đổi value thì
+tất cả các thẻ html có dùng nó đều bị ảnh hưởng*/
+
+
+/*import liv font google chuẩn*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --primary-color: #009688;
+    --border-color:#686565;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    /*thuộc tính giúp không tăng kích thước của gốc lên khi có các thay đổi
+   về border, padding, margin...*/
+    box-sizing: border-box;
+}
+
+html {
+    /*62.5% là kiểu chia theo HACK
+    -> quy ra 1  rem là 10 px
+    vậy nếu muốn 12px thì 1.2 rem
+    nếu muốn 16px thì là 1.6 rem
+    --> xem them về HACK và cách lấy tỉ lệ rem
+    */
+    /* font-size: 62.5%; */
+    /*độ cao chữ mặt đinh*/
+    /* line-height: 1.6rem; */
+    /*chuẩn font roboto của google*/
+    font-family: "Roboto", sans-serif;
+    background-color: #fffdf6;
+}
+
+body {
+     /* position: relative;
+     height: 100%; */
+}
+
+
+/*****************REPONSIVE WEB MOBILE ....*****************/
+
+
+/*thiết lập reponsive tương thích các màn hình giao diện khác nhau*/
+
+.grid {
+    width: 1200px;
+    /*nếu giả dụ ki dùng web site này ở màn hình bé hơn màn hình có kích thuocs là 1200px
+    thì max-with:100% sẽ giúp gia diện đó tương thích vơi màn hình đó đc 100% 
+    tương thích hơn*/
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+
+/*xây dựng một cái modifier cho block grid quay tắc beem
+để nếu koong muốn dùng quy ước class grid thì ta dùng cái này*/
+
+.grid__full-with {
+    width: 100%;
+}
+
+
+/*tạo class base đẻ dùng đến nó thì tất cả các flex item đều mặc định
+nằm theo trục hàng ngang tự động xuống dòng cho các item khi sai ở các 
+tỷ lệ màn hình khác nhau*/
+
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+}

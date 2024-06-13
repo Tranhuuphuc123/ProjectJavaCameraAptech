@@ -1,0 +1,16 @@
+/* BASE */
+:root {
+    --test: white;
+}
+
+/* RESET */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    /*thuộc tính giúp không tăng kích thước của gốc lên khi có các thay đổi
+   về border, padding, margin...*/
+    box-sizing: border-box;
+}
